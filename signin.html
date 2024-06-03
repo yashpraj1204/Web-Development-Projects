@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hotel Management Registration Form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  /* Global styles */
+  *{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+}
+
+    .header{
+
+      top: 0;right: 0;left: 0;
+      background-color:rgba(17, 14, 14, 0.834);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      color: white;
+      justify-content: space-between;
+      position: fixed;
+      padding: 0.2rem 7%;
+      z-index: 999;
+    }
+    .header .logoContent{
+      display: flex;
+      align-items: center;
+    }
+    
+    .header .logoContent .logo img{
+      height: 4rem;
+    }
+    .header .logoContent .logoName {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+    
+    .header .navbar a{
+      font-size: 1.7rem;
+      margin-right: 1.7rem;
+      color: var(--white  );
+      font-weight: bold;
+    }
+    .header .navbar a:hover{
+      border-bottom: .1rem solid var(--black);
+      padding-bottom: .4rem;
+    }
+    
+    .input-groupmb-3{
+      width: 11%;
+      display:inline-flex;
+    }
+    
+  .heading{
+    text-align: center;
+    color: #3e8e41;
+    margin-top:100px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  form{
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+    text-align: left;
+    
+}
+
+label {
+    font-weight: bold;
+  }
+  input[type="submit"] {
+    width: 30%;
+    padding: 13px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+</style>
+  
+  <script>
+    function validateForm() {
+      var name = document.forms["registration"]["name"].value;
+      var email = document.forms["registration"]["email"].value;
+      var password = document.forms["registration"]["password"].value;
+      var confirmPassword = document.forms["registration"]["confirmPassword"].value;
+
+      if (name == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+      if (email == "") {
+        alert("Email must be filled out");
+        return false;
+      }
+      if (password == "") {
+        alert("Password must be filled out");
+        return false;
+      }
+      if (confirmPassword == "") {
+        alert("Confirm Password must be filled out");
+        return false;
+      }
+      if (password != confirmPassword) {
+        alert("Passwords do not match");
+        return false;
+      }
+    }
+  </script>
+
+</head>
+
+<body bgcolor="lightblue">
+
+  <header class="header">
+    <div class="logoContent">
+        <a href="#" class="logo"><img src="image/logo.png" alt=""></a>
+        <h1 class="logoName">Apple.Inc </h1>
+    </div>
+
+    <nav class="navbar"> 
+        <a href="home.html">home</a>
+        <a href="#product">product</a>
+        <a href="#review">review</a>
+        <a href="contact.html">contact</a>
+        <a href="aboutus.html">About us</a>
+        <a href="login.html">Login</a>
+        <a href="singup.html">Sign in</a>
+    </nav>
+
+    <div class="input-groupmb-3">
+        <input type="text" class="form-control" placeholder="SEARCH">
+        <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+      </div> 
+
+           
+</header>
+  <h1 class="heading"><u>Registration Form</h1></u>
+  <form name="registration" onsubmit="return validateForm()" method="post" action="login.html">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="abc@gmail.com"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Password"><br><br>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>

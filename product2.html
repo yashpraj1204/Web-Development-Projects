@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  /* Global styles */
+  *{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+}
+		.header{
+
+			top: 0;right: 0;left: 0;
+			background-color:rgba(17, 14, 14, 0.834);
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: fixed;
+			padding: 0.2rem 7%;
+			z-index: 999;
+		  }
+		  .header .logoContent{
+			display: flex;
+			align-items: center;
+		  }
+		  
+		  .header .logoContent .logo img{
+			height: 4rem;
+		  }
+		  .header .logoContent .logoName {
+			color: var(--white);
+			font-size: 1.5rem;
+			font-weight: bolder;
+		  }
+		  
+		  .header .navbar a{
+			font-size: 1.7rem;
+			margin-right: 1.7rem;
+			color: var(--white  );
+			font-weight: bold;
+		  }
+		  .header .navbar a:hover{
+			border-bottom: .1rem solid var(--black);
+			padding-bottom: .4rem;
+		  }
+		  
+		  .input-groupmb-3{
+			width: 11%;
+			display:inline-flex;
+		  }
+    .product {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 50px;
+	border: 1px solid #ddd;
+	padding: 20px;
+	margin-top:  80px;;
+}
+
+.product-image {
+	flex-basis: 40%;
+	max-width: 40%;
+	margin-right: 20px;
+}
+
+.product-info {
+	flex-basis: 55%;
+	max-width: 55%;
+}
+
+.product h1 {
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.product-description {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.product-features {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.product-features li {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.product-price {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.add-to-cart {
+	background-color: #020202;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+	background-color: #19391a;
+}
+
+	
+	</style>
+	  
+</head>
+<body>
+	<header class="header" >
+        <div class="logoContent">
+            <a href="#" class="logo"><img src="image/logo.png" alt=""></a>
+            <h1 class="logoName">Apple.Inc </h1>
+        </div>
+
+        <nav class="navbar"> 
+            <a href="#space">home</a>
+            <a href="#product">product</a>
+            <a href="#review">review</a>
+            <a href="contact.html">contact</a>
+            <a href="aboutus.html">About us</a>
+            <a href="login.html">Login</a>
+            <a href="signin.html">Sign in</a>
+        </nav>
+
+        <div class="input-groupmb-3">
+            <input type="text" class="form-control" placeholder="SEARCH">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fa fa-search"></i></span>
+            </div>
+          </div> 
+
+               
+    </header>
+	<div class="product">
+		<div class="product-image">
+			<img src="image/applewatch3.jpg" alt="HP Spectre">
+		</div>
+		<div class="product-info">
+			<h1>APPLE WATCH x NIKE</h1>
+			<p class="product-description">Take your running even further. Add a Nike face or strap to your Apple Watch and use the Nike Run Club app as your favourite running partner.</p><br><p> Nike Run Club is your coach, community and journal. Just like you, the app is always getting better. With updates that bring advanced features straight to Apple Watch, it will have you running like clockwork.
+			</p>
+			<ul class="product-features">
+				
+			</ul>
+			<p class="product-price">₹65,000</p>
+			<button class="add-to-cart">Buy Now</button>
+		</div>
+	</div>
+</body>
+</html>
